@@ -110,6 +110,26 @@
         </connector>
     </assignments>
     <assignments>
+        <name>Assign_Output_Variables</name>
+        <label>Assign Output Variables</label>
+        <locationX>153</locationX>
+        <locationY>1439</locationY>
+        <assignmentItems>
+            <assignToReference>VerifyStatus</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <stringValue>approved</stringValue>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>VerifyValid</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <booleanValue>true</booleanValue>
+            </value>
+        </assignmentItems>
+    </assignments>
+    <assignments>
         <name>Assign_Screen_to_Variables</name>
         <label>Assign Screen to Variables</label>
         <locationX>1171</locationX>
@@ -291,6 +311,9 @@
         <label>Check Valid</label>
         <locationX>635</locationX>
         <locationY>1132</locationY>
+        <defaultConnector>
+            <targetReference>Assign_Output_Variables</targetReference>
+        </defaultConnector>
         <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
         <rules>
             <name>Not_Valid</name>
@@ -448,29 +471,73 @@
         <allowFinish>true</allowFinish>
         <allowPause>true</allowPause>
         <fields>
-            <name>Logo</name>
-            <extensionName>flowruntime:image</extensionName>
-            <fieldType>ComponentInstance</fieldType>
-            <inputParameters>
-                <name>imageName</name>
-                <value>
-                    <stringValue>Twilio_Verify_Logo</stringValue>
-                </value>
-            </inputParameters>
-            <inputParameters>
-                <name>horizontalAlignment</name>
-                <value>
-                    <stringValue>center</stringValue>
-                </value>
-            </inputParameters>
-            <inputsOnNextNavToAssocScrn>UseStoredValues</inputsOnNextNavToAssocScrn>
-            <isRequired>true</isRequired>
-            <storeOutputAutomatically>true</storeOutputAutomatically>
-        </fields>
-        <fields>
-            <name>Setup_Text</name>
-            <fieldText>&lt;p&gt;&lt;span style=&quot;font-size: 12px; color: rgb(0, 0, 0);&quot;&gt;As part of Twilio&apos;s account security offerings, the Twilio Verify API makes it simple to add user verification to your web application. It supports codes sent via voice, SMS, and&amp;nbsp;&lt;/span&gt;&lt;a href=&quot;https://www.twilio.com/docs/verify/email&quot; rel=&quot;noopener noreferrer&quot; target=&quot;_blank&quot; style=&quot;font-size: 12px; color: rgb(0, 0, 0);&quot;&gt;email&lt;/a&gt;&lt;span style=&quot;font-size: 12px; color: rgb(0, 0, 0);&quot;&gt;.&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot;color: rgb(0, 0, 0);&quot;&gt;Prerequisite&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot;color: rgb(0, 0, 0);&quot;&gt;You will need the following:&lt;/span&gt;&lt;/p&gt;&lt;ul&gt;&lt;li&gt;&lt;a href=&quot;https://www.twilio.com/try-twilio&quot; rel=&quot;noopener noreferrer&quot; target=&quot;_blank&quot; style=&quot;color: rgb(0, 0, 0);&quot;&gt;Twilio Account&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href=&quot;https://www.twilio.com/console&quot; rel=&quot;noopener noreferrer&quot; target=&quot;_blank&quot; style=&quot;color: rgb(0, 0, 0);&quot;&gt;Account SID and Auth Token&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href=&quot;https://www.twilio.com/console/verify/services&quot; rel=&quot;noopener noreferrer&quot; target=&quot;_blank&quot; style=&quot;color: rgb(0, 0, 0);&quot;&gt;Verify Service SID&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;&lt;p&gt;&lt;span style=&quot;font-size: 12px; color: rgb(0, 0, 0);&quot;&gt;Getting Started&lt;/span&gt;&lt;/p&gt;&lt;ol&gt;&lt;li&gt;&lt;span style=&quot;color: rgb(0, 0, 0);&quot;&gt;Twilio Credentials&lt;/span&gt;&lt;/li&gt;&lt;li&gt;&lt;span style=&quot;color: rgb(0, 0, 0);&quot;&gt;Verify Service&lt;/span&gt;&lt;/li&gt;&lt;/ol&gt;&lt;p&gt;&lt;span style=&quot;color: rgb(0, 0, 0);&quot;&gt;&lt;span class=&quot;ql-cursor&quot;&gt;﻿&lt;/span&gt;&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot;color: rgb(0, 0, 0);&quot;&gt;Twilio Credentials&lt;/span&gt;&lt;/p&gt;&lt;ol&gt;&lt;li&gt;&lt;span style=&quot;color: rgb(0, 0, 0);&quot;&gt;Go to Setup &amp;gt; Quick Find &amp;gt; Named Credentials.&lt;/span&gt;&lt;/li&gt;&lt;li&gt;Click on &lt;b&gt;Twilio Verify&lt;/b&gt;.&lt;/li&gt;&lt;li&gt;Click &lt;b&gt;Edit&lt;/b&gt;.&lt;/li&gt;&lt;li&gt;In the &lt;b&gt;Username &lt;/b&gt;text field add your Twilio Account SID.&lt;/li&gt;&lt;li&gt;In the &lt;b&gt;Password &lt;/b&gt;text field add your Twilio Auth Token.&lt;/li&gt;&lt;li&gt;Click &lt;b&gt;Save&lt;/b&gt;.&lt;/li&gt;&lt;/ol&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;Verify Service&lt;/p&gt;&lt;ol&gt;&lt;li&gt;Go to Setup &amp;gt; Quick Find &amp;gt; Flows.&lt;/li&gt;&lt;li&gt;Click on &lt;b&gt;Twilio Verify&lt;/b&gt;.&lt;/li&gt;&lt;li&gt;Under Toolbox, click &lt;b&gt;Manager&lt;/b&gt; tab.&lt;/li&gt;&lt;li&gt;Under Variables, click &lt;b&gt;VerifyServiceSID&lt;/b&gt;.&lt;/li&gt;&lt;li&gt;In the &lt;b&gt;Default Value&lt;/b&gt; text field add your Verify Service SID.&lt;/li&gt;&lt;li&gt;Click &lt;b&gt;Save&lt;/b&gt;.&lt;/li&gt;&lt;li&gt;Click &lt;b&gt;Save As&lt;/b&gt; and &lt;b&gt;Activate&lt;/b&gt;.&lt;/li&gt;&lt;/ol&gt;</fieldText>
-            <fieldType>DisplayText</fieldType>
+            <name>Setup_Screen_Section1</name>
+            <fieldType>RegionContainer</fieldType>
+            <fields>
+                <name>Setup_Screen_Section1_Column1</name>
+                <fieldType>Region</fieldType>
+                <fields>
+                    <name>Header</name>
+                    <fieldText>&lt;p style=&quot;text-align: center;&quot;&gt;&lt;b style=&quot;font-size: 14px;&quot;&gt;Twilio Verify&lt;/b&gt;&lt;/p&gt;</fieldText>
+                    <fieldType>DisplayText</fieldType>
+                </fields>
+                <fields>
+                    <name>Logo</name>
+                    <extensionName>flowruntime:image</extensionName>
+                    <fieldType>ComponentInstance</fieldType>
+                    <inputParameters>
+                        <name>imageName</name>
+                        <value>
+                            <stringValue>Twilio_Verify_Logo</stringValue>
+                        </value>
+                    </inputParameters>
+                    <inputParameters>
+                        <name>imageHeight</name>
+                        <value>
+                            <stringValue>500</stringValue>
+                        </value>
+                    </inputParameters>
+                    <inputParameters>
+                        <name>imageWidth</name>
+                        <value>
+                            <stringValue>500</stringValue>
+                        </value>
+                    </inputParameters>
+                    <inputParameters>
+                        <name>horizontalAlignment</name>
+                        <value>
+                            <stringValue>center</stringValue>
+                        </value>
+                    </inputParameters>
+                    <inputsOnNextNavToAssocScrn>UseStoredValues</inputsOnNextNavToAssocScrn>
+                    <isRequired>true</isRequired>
+                    <storeOutputAutomatically>true</storeOutputAutomatically>
+                </fields>
+                <inputParameters>
+                    <name>width</name>
+                    <value>
+                        <stringValue>6</stringValue>
+                    </value>
+                </inputParameters>
+                <isRequired>false</isRequired>
+            </fields>
+            <fields>
+                <name>Setup_Screen_Section1_Column2</name>
+                <fieldType>Region</fieldType>
+                <fields>
+                    <name>Setup_Text</name>
+                    <fieldText>&lt;p&gt;&lt;span style=&quot;font-size: 12px; color: rgb(0, 0, 0);&quot;&gt;As part of Twilio&apos;s account security offerings, the Twilio Verify API makes it simple to add user verification to your web application. It supports codes sent via voice, SMS, and&amp;nbsp;&lt;/span&gt;&lt;a href=&quot;https://www.twilio.com/docs/verify/email&quot; rel=&quot;noopener noreferrer&quot; target=&quot;_blank&quot; style=&quot;font-size: 12px; color: rgb(0, 0, 0);&quot;&gt;email&lt;/a&gt;&lt;span style=&quot;font-size: 12px; color: rgb(0, 0, 0);&quot;&gt;.&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot;color: rgb(0, 0, 0);&quot;&gt;Prerequisite&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot;color: rgb(0, 0, 0);&quot;&gt;You will need the following:&lt;/span&gt;&lt;/p&gt;&lt;ul&gt;&lt;li&gt;&lt;a href=&quot;https://www.twilio.com/try-twilio&quot; rel=&quot;noopener noreferrer&quot; target=&quot;_blank&quot; style=&quot;color: rgb(0, 0, 0);&quot;&gt;Twilio Account&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href=&quot;https://www.twilio.com/console&quot; rel=&quot;noopener noreferrer&quot; target=&quot;_blank&quot; style=&quot;color: rgb(0, 0, 0);&quot;&gt;Account SID and Auth Token&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href=&quot;https://www.twilio.com/console/verify/services&quot; rel=&quot;noopener noreferrer&quot; target=&quot;_blank&quot; style=&quot;color: rgb(0, 0, 0);&quot;&gt;Verify Service SID&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;&lt;p&gt;&lt;span style=&quot;font-size: 12px; color: rgb(0, 0, 0);&quot;&gt;Getting Started&lt;/span&gt;&lt;/p&gt;&lt;ol&gt;&lt;li&gt;&lt;span style=&quot;color: rgb(0, 0, 0);&quot;&gt;Twilio Credentials&lt;/span&gt;&lt;/li&gt;&lt;li&gt;&lt;span style=&quot;color: rgb(0, 0, 0);&quot;&gt;Verify Service&lt;/span&gt;&lt;/li&gt;&lt;/ol&gt;&lt;p&gt;&lt;span style=&quot;color: rgb(0, 0, 0);&quot;&gt;&lt;span class=&quot;ql-cursor&quot;&gt;﻿&lt;/span&gt;&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot;color: rgb(0, 0, 0);&quot;&gt;Twilio Credentials&lt;/span&gt;&lt;/p&gt;&lt;ol&gt;&lt;li&gt;&lt;span style=&quot;color: rgb(0, 0, 0);&quot;&gt;Go to Setup &amp;gt; Quick Find &amp;gt; Named Credentials.&lt;/span&gt;&lt;/li&gt;&lt;li&gt;Click on &lt;b&gt;Twilio Verify&lt;/b&gt;.&lt;/li&gt;&lt;li&gt;Click &lt;b&gt;Edit&lt;/b&gt;.&lt;/li&gt;&lt;li&gt;In the &lt;b&gt;Username &lt;/b&gt;text field add your Twilio Account SID.&lt;/li&gt;&lt;li&gt;In the &lt;b&gt;Password &lt;/b&gt;text field add your Twilio Auth Token.&lt;/li&gt;&lt;li&gt;Click &lt;b&gt;Save&lt;/b&gt;.&lt;/li&gt;&lt;/ol&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;Verify Service&lt;/p&gt;&lt;ol&gt;&lt;li&gt;Go to Setup &amp;gt; Quick Find &amp;gt; Flows.&lt;/li&gt;&lt;li&gt;Click on &lt;b&gt;Twilio Verify&lt;/b&gt;.&lt;/li&gt;&lt;li&gt;Under Toolbox, click &lt;b&gt;Manager&lt;/b&gt; tab.&lt;/li&gt;&lt;li&gt;Under Variables, click &lt;b&gt;VerifyServiceSID&lt;/b&gt;.&lt;/li&gt;&lt;li&gt;In the &lt;b&gt;Default Value&lt;/b&gt; text field add your Verify Service SID.&lt;/li&gt;&lt;li&gt;Click &lt;b&gt;Save&lt;/b&gt;.&lt;/li&gt;&lt;li&gt;Click &lt;b&gt;Save As&lt;/b&gt; and &lt;b&gt;Activate&lt;/b&gt;.&lt;/li&gt;&lt;/ol&gt;</fieldText>
+                    <fieldType>DisplayText</fieldType>
+                </fields>
+                <inputParameters>
+                    <name>width</name>
+                    <value>
+                        <stringValue>6</stringValue>
+                    </value>
+                </inputParameters>
+                <isRequired>false</isRequired>
+            </fields>
+            <isRequired>false</isRequired>
         </fields>
         <showFooter>false</showFooter>
         <showHeader>false</showHeader>
@@ -506,7 +573,7 @@
             <targetReference>Check_All_Input_Fields</targetReference>
         </connector>
     </start>
-    <status>Draft</status>
+    <status>Active</status>
     <variables>
         <name>Channel</name>
         <dataType>String</dataType>
@@ -548,6 +615,9 @@
         <isCollection>false</isCollection>
         <isInput>false</isInput>
         <isOutput>false</isOutput>
+        <value>
+            <stringValue>VAXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX</stringValue>
+        </value>
     </variables>
     <variables>
         <name>VerifyStatus</name>
