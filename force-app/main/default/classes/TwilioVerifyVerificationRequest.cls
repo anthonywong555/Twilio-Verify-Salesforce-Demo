@@ -20,4 +20,12 @@ public class TwilioVerifyVerificationRequest {
     
 	@AuraEnabled @InvocableVariable(label='Custom Code' description='A pre-generated code to use for verification. The code can be between 4 and 10 characters, inclusive.' required=false)
     public String CustomCode;
+
+    public TwilioVerifyVerificationRequest() {}
+
+    public TwilioVerifyVerificationRequest(String ServiceSid, String To, String Channel) {
+        this.ServiceSid = ServiceSid;
+        this.To = To;
+        this.Channel = Channel;
+    }
 }
