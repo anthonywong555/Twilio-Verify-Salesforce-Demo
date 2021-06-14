@@ -11,4 +11,17 @@ public class TwilioVerifyVerificationCheckRequest {
     
     @AuraEnabled @InvocableVariable(label='Verification Sid' description='A SID that uniquely identifies the Verification Check. Either this parameter or the to phone number/email must be specified.' required=false)
     public String VerificationSid;
+
+    public TwilioVerifyVerificationCheckRequest() {}
+
+    public TwilioVerifyVerificationCheckRequest(String ServiceSid, String Code) {
+        this.ServiceSid = ServiceSid;
+        this.Code = Code;
+    }
+
+    public TwilioVerifyVerificationCheckRequest(String ServiceSid, String Code, String To) {
+        this.ServiceSid = ServiceSid;
+        this.Code = Code;
+        this.To = To;
+    }
 }
