@@ -2,6 +2,8 @@
 
 As part of Twilio's account security offerings, the Twilio Verify API makes it simple to add user verification to your web application. It supports codes sent via voice, SMS, and email.
 
+![](./assets/Twilio-Verify-Demo.gif)
+
 ## Prerequisite
 
 You will need the following:
