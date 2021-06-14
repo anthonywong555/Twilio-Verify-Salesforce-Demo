@@ -17,5 +17,9 @@
 		<members>*</members>
 		<name>NamedCredential</name>
 	</types>
+	<types>
+		<members>*</members>
+		<name>StaticResource</name>
+	</types>
 	<version>51.0</version>
 </Package>
