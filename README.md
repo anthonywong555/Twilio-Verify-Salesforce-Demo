@@ -15,9 +15,9 @@ You will need the following:
 ## Getting Started
 ### Install
 
-- Package Id: 04t5e000000ls1u
-- [Production](https://login.salesforce.com/packaging/installPackage.apexp?p0=04t5e000000ls1u)
-- [Sandbox](https://test.salesforce.com/packaging/installPackage.apexp?p0=04t5e000000ls1u)
+- Package Id: 04t5e000000ls1z
+- [Production](https://login.salesforce.com/packaging/installPackage.apexp?p0=04t5e000000ls1z)
+- [Sandbox](https://test.salesforce.com/packaging/installPackage.apexp?p0=04t5e000000ls1z)
 
 ### Twilio Credentials
 
