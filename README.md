@@ -1,18 +1,37 @@
-# Salesforce DX Project: Next Steps
+# Twilio Verify Salesforce Demo
 
-Now that you’ve created a Salesforce DX project, what’s next? Here are some documentation resources to get you started.
+As part of Twilio's account security offerings, the Twilio Verify API makes it simple to add user verification to your web application. It supports codes sent via voice, SMS, and email.
 
-## How Do You Plan to Deploy Your Changes?
+## Prerequisite
 
-Do you want to deploy a set of changes, or create a self-contained application? Choose a [development model](https://developer.salesforce.com/tools/vscode/en/user-guide/development-models).
+You will need the following:
 
-## Configure Your Salesforce DX Project
+- [Twilio Account](https://www.twilio.com/try-twilio)
+- [Account SID and Auth Token](https://www.twilio.com/console)
+- [Verify Service SID](https://www.twilio.com/console/verify/services)
 
-The `sfdx-project.json` file contains useful configuration information for your project. See [Salesforce DX Project Configuration](https://developer.salesforce.com/docs/atlas.en-us.sfdx_dev.meta/sfdx_dev/sfdx_dev_ws_config.htm) in the _Salesforce DX Developer Guide_ for details about this file.
+## Getting Started
+### Install
 
-## Read All About It
+- Package Id: 04t5e000000ls1u
+- [Production](https://login.salesforce.com/packaging/installPackage.apexp?p0=04t5e000000ls1u)
+- [Sandbox](https://test.salesforce.com/packaging/installPackage.apexp?p0=04t5e000000ls1u)
 
-- [Salesforce Extensions Documentation](https://developer.salesforce.com/tools/vscode/)
-- [Salesforce CLI Setup Guide](https://developer.salesforce.com/docs/atlas.en-us.sfdx_setup.meta/sfdx_setup/sfdx_setup_intro.htm)
-- [Salesforce DX Developer Guide](https://developer.salesforce.com/docs/atlas.en-us.sfdx_dev.meta/sfdx_dev/sfdx_dev_intro.htm)
-- [Salesforce CLI Command Reference](https://developer.salesforce.com/docs/atlas.en-us.sfdx_cli_reference.meta/sfdx_cli_reference/cli_reference.htm)
+### Twilio Credentials
+
+1. Go to Setup > Quick Find > Named Credentials.
+2. Click on Twilio Verify.
+3. Click Edit.
+4. In the Username text field add your Twilio Account SID.
+5. In the Password text field add your Twilio Auth Token.
+6. Click Save.
+
+### Verify Service
+
+1. Go to Setup > Quick Find > Flows.
+2. Click on Twilio Verify.
+3. Under Toolbox, click Manager tab.
+4. Under Variables, click VerifyServiceSID.
+5. In the Default Value text field add your Verify Service SID.
+6. Click Save.
+7. Click Save As and Activate.
