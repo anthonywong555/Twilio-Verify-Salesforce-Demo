@@ -11,6 +11,20 @@
 	</types>
 	<types>
 		<members>Twilio_Verify</members>
+		<name>CustomApplication</name>
+	</types>
+	<types>
+		<members>*</members>
+		<name>CustomTab</name>
+	</types>
+	<types>
+		<members>Twilio_Verify_Demo</members>
+		<members>Twilio_Verify_UtilityBar</members>
+		<name>FlexiPage</name>
+	</types>
+	<types>
+		<members>Twilio_Verify</members>
+		<members>Twilio_Verify_Demo</members>
 		<name>Flow</name>
 	</types>
 	<types>
